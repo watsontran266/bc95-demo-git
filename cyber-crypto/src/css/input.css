@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+/* @source "../node_modules/flowbite"; */
+
+@theme {
+    --color-gradient: linear-gradient(270.78deg, #ffa7a9 4.19%, #ff5ea3 96.11%);
+    --color-gradient-2: linear-gradient(-90deg, #ff7df2, #ff275b);
+}
+
+@layer components {
+    .btn {
+        @apply text-2xl py-2.5 px-5 text-white rounded-3xl;
+        background-image: var(--color-gradient-2);
+    }
+
+    .text-gradient {
+        background-clip: text;
+        -webkit-text-fill-color: #0000;
+        background-image: var(--color-gradient);
+    }
+}
+
+body {
+    background-color: #151937;
+    color: #ffffff;
+}
+
+.trusted__item {
+    @apply text-center p-4 rounded-2xl;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.trusted__img img {
+    @apply mx-auto;
+}
+
+.feedback__item {
+    @apply py-5 px-8 rounded-xl;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feedback__carousel .slick-slide {
+    @apply mx-4;
+}
+
+.feedback__carousel .slick-dots li button:before {
+    color: #fff;
+    opacity: 1;
+    font-size: 16px;
+}
+
+.feedback__carousel .slick-dots li.slick-active button:before {
+    color: #ff5ea3;
+}
+
+.footer__content {
+    background: rgba(255, 255, 255, 0.2);
+    @apply p-4 rounded-xl;
+}
+
+.footer__btn {
+    background-image: var(--color-gradient-2);
+    @apply rounded-xl p-2 absolute right-1 top-1;
+}
