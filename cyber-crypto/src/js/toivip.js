@@ -1,1 +1,1 @@
-quá là vip
+quá là vip; gi
